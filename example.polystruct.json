@@ -1,0 +1,64 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"properties": {
+		"someBoolean": {
+			"type": "boolean"
+		},
+		"someInteger": {
+			"type": "integer"
+		},
+		"someString": {
+			"type": "string"
+		},
+		"someBooleanEnum": {
+			"type": "boolean",
+			"enum": [true]
+		},
+		"someIntegerEnum": {
+			"type": "integer",
+			"enum": [0, 3]
+		},
+		"someStringEnum": {
+			"type": "string",
+			"enum": ["a", "b", "c"]
+		},
+		"someArrayOfBooleans": {
+			"type": "array",
+			"items": {
+				"type": "boolean"
+			}
+		},
+		"someArrayOfIntegers": {
+			"type": "array",
+			"items": {
+				"type": "integer"
+			}
+		},
+		"someArrayOfStrings": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"someObject": {
+			"type": "object",
+			"properties": {
+				"key1": {
+					"type": "string"
+				},
+				"key2": {
+					"type": "integer"
+				},
+				"subobj": {
+					"type": "object",
+					"properties": {
+						"wha": {
+							"type": "string",
+							"enum": ["uwu", "owo", "rawr"]
+						}
+					}
+				}
+			}
+		}
+	}
+}

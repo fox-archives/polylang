@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"type": "object",
+	"title": "Polystruct Schema",
+	"patternProperties": {
+		"^[a-z]+$": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string",
+					"enum": ["boolean", "string", "integer"],
+					"default": "string"
+				},
+				"enum": {
+					"type": "array",
+					"items": {
+						"oneOf": [
+							{
+								"type": "boolean"
+							},
+							{
+								"type": "string"
+							},
+							{
+								"type": "integer"
+							}
+						]
+					},
+					"default": []
+				},
+				"optional": {
+					"type": "boolean",
+					"default": false
+				}
+			}
+		}
+	}
+}
